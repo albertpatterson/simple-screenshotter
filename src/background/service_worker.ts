@@ -1,5 +1,4 @@
 import { handleRequestInServiceWorker } from '../messaging/message';
-import { logResponse } from '../messaging/util';
 import {
   create as createSelectScreenshotAreaRequest,
   messageSystem as selectScreenshotAreaMessageSystem,
@@ -11,15 +10,11 @@ import {
 } from '../messaging/message_systems/crop_download_screenshot_request/message_system';
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log('received message in service worker', request);
-
   return handleRequestInServiceWorker(request, sender, sendResponse);
 });
 
 chrome.action.onClicked.addListener(async (tab) => {
   try {
-    console.log('action clicked, requesting screenshot area');
-
     const selectScreenshotAreaRequest = createSelectScreenshotAreaRequest();
     const selectScreenshotAreaResponse =
       await selectScreenshotAreaMessageSystem.sendInServiceWorker(

@@ -25,3 +25,10 @@ export function isResponseFailure<T>(
 ): result is ResponseFailure<T> {
   return !result.succeeded;
 }
+
+export interface Rectangle {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+}

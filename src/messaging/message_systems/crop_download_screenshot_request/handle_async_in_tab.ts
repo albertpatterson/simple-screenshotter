@@ -2,15 +2,12 @@ import {
   CropDownlodScreenshotData,
   CropDownlodScreenshotRequest,
 } from './message_system';
-import { ResponseResult } from '../../types';
-import { Rectangle } from '../select_screenshot_area_request/message_system';
+import { ResponseResult, Rectangle } from '../../types';
 
 export async function handleAsyncInTab(
   request: CropDownlodScreenshotRequest,
   sender: chrome.runtime.MessageSender
 ): Promise<ResponseResult<CropDownlodScreenshotData>> {
-  console.log('recieved CropDownlodScreenshotRequest', request);
-
   const croppedDataUrl = await getCroppedImage(
     request.dataUrl,
     request.rectangle
@@ -41,8 +38,6 @@ function getCroppedImage(
     const img = document.createElement('img') as HTMLImageElement;
     img.src = dataUrl;
     img.onload = () => {
-      console.log('image loaded');
-
       canvas.width = cropRectangle.width;
       canvas.height = cropRectangle.height;
 

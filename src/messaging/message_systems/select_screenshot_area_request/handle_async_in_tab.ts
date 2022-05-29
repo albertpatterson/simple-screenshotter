@@ -1,17 +1,13 @@
 import {
   SelectScreenshotAreaData,
   SelectScreenshotAreaRequest,
-  Rectangle,
 } from './message_system';
-import { ResponseResult } from '../../types';
-import { readJsonConfigFile } from 'typescript';
+import { ResponseResult, Rectangle } from '../../types';
 
 export async function handleAsyncInTab(
   request: SelectScreenshotAreaRequest,
   sender: chrome.runtime.MessageSender
 ): Promise<ResponseResult<SelectScreenshotAreaData>> {
-  console.log('recieved SelectScreenshotAreaRequest');
-
   try {
     const rectangle = await listenForOneClick();
 

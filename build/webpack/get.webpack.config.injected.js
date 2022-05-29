@@ -24,7 +24,6 @@ function getEntry(useJs, isProd) {
 
   return {
     all_pages: path.resolve(context, `all_pages.${suffix}`),
-    home_page: path.resolve(context, `home_page.${suffix}`),
   };
 }
 

@@ -26,10 +26,6 @@
     {
       "matches": ["https://*/*", "http://*/*"],
       "js": ["injected/all_pages.js"]
-    },
-    {
-      "matches": ["https://*/home/*", "http://*/home/*"],
-      "js": ["injected/home_page.js"]
     }
   ],
   "homepage_url": "https://github.com/albertpatterson/chrome-extension-starter",

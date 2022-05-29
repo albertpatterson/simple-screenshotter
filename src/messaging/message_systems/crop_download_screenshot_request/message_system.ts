@@ -1,10 +1,7 @@
-import { BaseRequest } from '../../types';
+import { BaseRequest, Rectangle } from '../../types';
 import { createMessageSystem } from '../base_message_system';
 import { handleAsyncInTab } from './handle_async_in_tab';
 import { handleAsyncInServiceWorker } from '../noops/handle_async_in_service_worker';
-import { stringifyResponse } from '../../util';
-import { readConfigFile } from 'typescript';
-import { Rectangle } from '../select_screenshot_area_request/message_system';
 
 const REQUEST_NAME = 'crop download screenshot';
 export interface CropDownlodScreenshotRequest extends BaseRequest {
