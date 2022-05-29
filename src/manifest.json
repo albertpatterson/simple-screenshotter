@@ -1,13 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Chrome-Extension-Starter",
+  "name": "Simple Screenshotter",
   "version": "1.0.0",
 
   "description": "The next great extension to take the Web Store by storm - Built with Chrome-Extension-Starter.",
 
   "action": {
     "default_title": "Chrome Extension Starter",
-    "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icon/icon16.png",
       "24": "icon/icon24.png",
@@ -34,5 +33,5 @@
     }
   ],
   "homepage_url": "https://github.com/albertpatterson/chrome-extension-starter",
-  "permissions": []
+  "permissions": ["activeTab"]
 }

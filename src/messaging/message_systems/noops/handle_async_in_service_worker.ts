@@ -1,8 +1,8 @@
 import { BaseRequest, ResponseResult } from '../../types';
 
-export async function handleAsyncInServiceWorker(
+export async function handleAsyncInServiceWorker<T>(
   request: BaseRequest,
   sender: chrome.runtime.MessageSender
-): Promise<ResponseResult<{}>> {
+): Promise<ResponseResult<T>> {
   throw new Error('noop handleAsyncInServiceWorker called');
 }
