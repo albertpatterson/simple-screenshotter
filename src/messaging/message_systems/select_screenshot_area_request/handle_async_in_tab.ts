@@ -80,7 +80,17 @@ function listenForOneClick(): Promise<Rectangle> {
 
     function finish(event: MouseEvent) {
       if (event.target instanceof HTMLElement) {
-        res(event.target.getBoundingClientRect());
+        const scale = Number(window.devicePixelRatio) || 1;
+        const clientRect = event.target.getBoundingClientRect();
+
+        const rect = {
+          x: clientRect.x * scale,
+          y: clientRect.y * scale,
+          height: clientRect.height * scale,
+          width: clientRect.width * scale,
+        };
+
+        res(rect);
       } else {
         rej('non html element selected');
       }
