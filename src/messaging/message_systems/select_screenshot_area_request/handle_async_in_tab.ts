@@ -89,6 +89,7 @@ function listenForOneClick(): Promise<Rectangle> {
     function handleClick(event: MouseEvent) {
       cleanup();
       event.stopPropagation();
+      event.preventDefault();
       setTimeout(() => finish(event), 100);
     }
 
