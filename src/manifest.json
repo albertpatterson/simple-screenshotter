@@ -3,10 +3,10 @@
   "name": "Simple Screenshotter",
   "version": "1.0.0",
 
-  "description": "The next great extension to take the Web Store by storm - Built with Chrome-Extension-Starter.",
+  "description": "Take screenshots - Built with create-extension.",
 
   "action": {
-    "default_title": "Chrome Extension Starter",
+    "default_title": "Simple Screenshotter",
     "default_icon": {
       "16": "icon/icon16.png",
       "24": "icon/icon24.png",

@@ -2,6 +2,8 @@
 
 Simple extension to capture screenshots of elements on the page made with [create-extension](https://www.npmjs.com/package/create-extension)
 
+<b>Install from the [Web Store](https://chrome.google.com/webstore/detail/simple-screenshotter/oaohcnlnpoacmghhhhbkamngdodophbj?hl=en&authuser=0)</b>
+
 ![demonstration](readme/demo.gif)
 
 ## Author
